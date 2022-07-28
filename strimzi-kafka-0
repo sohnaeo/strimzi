@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: strimzi-kafka-0
+  finalizers:
+  - kubernetes.io/pv-protection
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 12Gi
+  nfs:
+    path: /strimzi/strimzi-kafka-0
+    server: nfs.test.com
+  mountOptions: ["nolock"]
+  persistentVolumeReclaimPolicy: Retain
