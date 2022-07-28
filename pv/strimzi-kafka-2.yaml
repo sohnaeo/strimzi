@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: strimzi-kafka-2
+  name: strimzi-devtest-kafka-2
   finalizers:
   - kubernetes.io/pv-protection
 spec:
