@@ -47,12 +47,6 @@ spec:
       size: 12Gi
       deleteClaim: false
       class: managed-nfs-storage
-    metricsConfig:
-      type: jmxPrometheusExporter
-      valueFrom:
-        configMapKeyRef:
-          name: kafka-metrics
-          key: kafka-metrics-config.yml
   zookeeper:
     readinessProbe:
       initialDelaySeconds: 30
