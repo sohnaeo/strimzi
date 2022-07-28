@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: strimzi-kafka-0
+  name: strimzi-zookeeper-0
   finalizers:
   - kubernetes.io/pv-protection
 spec:
@@ -10,7 +10,7 @@ spec:
   capacity:
     storage: 12Gi
   nfs:
-    path: /strimzi/strimzi-kafka-0
+    path: /strimzi/strimzi-zookeeper-0
     server: nfs.test.com
   mountOptions: ["nolock"]
   persistentVolumeReclaimPolicy: Retain
